@@ -50,20 +50,43 @@ nav {
   justify-content: space-between;
   width: 100%; }
   #container1 .fswd1 {
-    height: 480px; }
+    align-self: stretch;
+    flex: 0 15%;
+    justify-content: end; }
   #container1 .together {
-    width: 85%; }
-  #container1 .first_row, #container1 .second_row {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 20px; }
-  #container1 .first_row img, #container1 .second_row img {
-    flex: 0 30%;
-    height: 26vh;
-    width: 22vw; }
+    flex: 0 80%; }
+    #container1 .together .first_row, #container1 .together .second_row {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between; }
+      #container1 .together .first_row .img_div, #container1 .together .second_row .img_div {
+        flex: 0 30%;
+        height: 26vh;
+        width: 22vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column; }
+        #container1 .together .first_row .img_div p, #container1 .together .second_row .img_div p {
+          background-color: black;
+          color: white;
+          min-height: 40px;
+          margin-top: auto;
+          margin-bottom: 0px; }
+      #container1 .together .first_row .img1, #container1 .together .second_row .img1 {
+        background-image: url("./img/nasa.png"); }
+      #container1 .together .first_row .img2, #container1 .together .second_row .img2 {
+        background-image: url("./img/eu.png"); }
+      #container1 .together .first_row .img3, #container1 .together .second_row .img3 {
+        background-image: url("./img/jeff.png"); }
+      #container1 .together .first_row .img4, #container1 .together .second_row .img4 {
+        background-image: url("./img/polar.png"); }
+      #container1 .together .first_row .img5, #container1 .together .second_row .img5 {
+        background-image: url("./img/musk.jpg"); }
+      #container1 .together .first_row .img6, #container1 .together .second_row .img6 {
+        background-image: url("./img/snowden.jpg"); }
   #container1 .how_to {
     margin: auto;
     width: 100%; }
