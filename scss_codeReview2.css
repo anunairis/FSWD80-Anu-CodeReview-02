@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: "Lucida Bright", Georgia, serif; }
+
+header {
+  background-color: #821918;
+  display: flex;
+  justify-content: space-between;
+  height: 120px; }
+  header .header_image {
+    margin: auto 20px; }
+    header .header_image img {
+      width: 16vw; }
+  header .header_banner {
+    margin: auto 60px auto 0; }
+    header .header_banner img {
+      width: 55vw;
+      height: 80px; }
+
+nav {
+  background-color: black; }
+  nav ul {
+    height: 40px;
+    margin: 0;
+    padding: 0 5px; }
+  nav li {
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block; }
+  nav a {
+    text-decoration: none;
+    color: white; }
+  nav nav a:hover {
+    background-color: red;
+    color: black; }
+
+#content {
+  width: 90%;
+  margin: auto; }
+  #content .date {
+    text-align: right; }
+  #content .top_news {
+    font-weight: bold;
+    background-color: lightgray;
+    padding: 10px 10px;
+    font-size: 1.2em; }
+
+#container1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  #container1 .fswd1 {
+    height: 480px; }
+  #container1 .together {
+    width: 85%; }
+  #container1 .first_row, #container1 .second_row {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px; }
+  #container1 .first_row img, #container1 .second_row img {
+    flex: 0 30%;
+    height: 26vh;
+    width: 22vw; }
+  #container1 .how_to {
+    margin: auto;
+    width: 100%; }
+    #container1 .how_to img {
+      width: 100%;
+      height: 15vh; }
+    #container1 .how_to .top_news {
+      font-weight: bold;
+      background-color: lightgray;
+      padding: 10px 10px;
+      font-size: 1.2em; }
+
+/*# sourceMappingURL=scss_codeReview2.css.map */
