@@ -23,16 +23,16 @@ nav {
     height: 40px;
     margin: 0;
     padding: 0 5px; }
-  nav li {
-    font-weight: bold;
-    padding: 10px 15px;
-    display: inline-block; }
-  nav a {
-    text-decoration: none;
-    color: white; }
-  nav nav a:hover {
-    background-color: red;
-    color: black; }
+    nav ul li {
+      font-weight: bold;
+      padding: 10px 15px;
+      display: inline-block; }
+      nav ul li:hover {
+        background-color: red;
+        color: black; }
+      nav ul li a {
+        text-decoration: none;
+        color: white; }
 
 #content {
   width: 90%;
@@ -51,30 +51,16 @@ nav {
   width: 100%; }
   #container1 .fswd1 {
     align-self: stretch;
-    flex: 0 15%;
+    flex: 0 12%;
     justify-content: end; }
   #container1 .together {
-    flex: 0 80%; }
+    flex: 0 85%; }
     #container1 .together .first_row, #container1 .together .second_row {
       width: 100%;
       display: flex;
       flex-wrap: nowrap;
       flex-direction: row;
       justify-content: space-between; }
-      #container1 .together .first_row .img_div, #container1 .together .second_row .img_div {
-        flex: 0 30%;
-        height: 26vh;
-        width: 22vw;
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column; }
-        #container1 .together .first_row .img_div p, #container1 .together .second_row .img_div p {
-          background-color: black;
-          color: white;
-          min-height: 40px;
-          margin-top: auto;
-          margin-bottom: 0px; }
       #container1 .together .first_row .img1, #container1 .together .second_row .img1 {
         background-image: url("./img/nasa.png"); }
       #container1 .together .first_row .img2, #container1 .together .second_row .img2 {
@@ -87,16 +73,110 @@ nav {
         background-image: url("./img/musk.jpg"); }
       #container1 .together .first_row .img6, #container1 .together .second_row .img6 {
         background-image: url("./img/snowden.jpg"); }
-  #container1 .how_to {
-    margin: auto;
-    width: 100%; }
-    #container1 .how_to img {
+      #container1 .together .first_row .img_div, #container1 .together .second_row .img_div {
+        flex: 0 30%;
+        height: 26vh;
+        width: 22vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column; }
+        #container1 .together .first_row .img_div p, #container1 .together .second_row .img_div p {
+          background-color: #101010;
+          color: white;
+          min-height: 40px;
+          margin-top: auto;
+          margin-bottom: 0px;
+          font-weight: bold; }
+  #container1 .top_news {
+    font-weight: bold;
+    background-color: lightgray;
+    padding: 10px 10px;
+    font-size: 1.2em; }
+
+.how_to {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
+  .how_to img {
+    margin: 30px 0;
+    width: 100%;
+    height: 15vh; }
+
+#container2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  #container2 .together2 {
+    flex: 0 85%; }
+    #container2 .together2 .third_row, #container2 .together2 .fourth_row {
       width: 100%;
-      height: 15vh; }
-    #container1 .how_to .top_news {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between; }
+      #container2 .together2 .third_row .img7, #container2 .together2 .fourth_row .img7 {
+        background-image: url("./img/iphone.png"); }
+      #container2 .together2 .third_row .img8, #container2 .together2 .fourth_row .img8 {
+        background-image: url("./img/smart.png"); }
+      #container2 .together2 .third_row .img9, #container2 .together2 .fourth_row .img9 {
+        background-image: url("./img/ear.png"); }
+      #container2 .together2 .third_row .img10, #container2 .together2 .fourth_row .img10 {
+        background-image: url("./img/phone.png"); }
+      #container2 .together2 .third_row .img_div, #container2 .together2 .fourth_row .img_div {
+        flex: 0 48%;
+        height: 50vh;
+        width: 36vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column; }
+        #container2 .together2 .third_row .img_div.img7, #container2 .together2 .third_row .img_div .img8, #container2 .together2 .fourth_row .img_div.img7, #container2 .together2 .fourth_row .img_div .img8 {
+          margin-bottom: 45px; }
+        #container2 .together2 .third_row .img_div p, #container2 .together2 .fourth_row .img_div p {
+          background-color: #101010;
+          color: white;
+          min-height: 50px;
+          margin-top: auto;
+          margin-bottom: 0px;
+          font-weight: bold;
+          font-size: 1.5em; }
+  #container2 .fswd1 {
+    align-self: stretch;
+    flex: 0 12%;
+    justify-content: end; }
+
+footer {
+  margin-top: 30px;
+  background-color: black;
+  height: 200px; }
+  footer ul {
+    height: 40px;
+    margin: 0;
+    padding: 0 5px;
+    margin-left: 40px; }
+    footer ul li {
       font-weight: bold;
-      background-color: lightgray;
-      padding: 10px 10px;
-      font-size: 1.2em; }
+      padding: 10px 15px;
+      display: inline-block; }
+      footer ul li:hover {
+        background-color: red;
+        color: black; }
+      footer ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em; }
+  footer .header_image {
+    margin: 30px 20px;
+    text-align: right; }
+    footer .header_image img {
+      width: 16vw;
+      height: auto; }
+  footer p {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+    margin: 0 auto; }
 
 /*# sourceMappingURL=scss_codeReview2.css.map */
