@@ -10,26 +10,56 @@ header {
 	display: flex;
 	justify-content: space-between;
 	height: 120px;
-	.header_image {
-		margin: auto 20px;
-		img {
-			width: 16vw;}
+	@media screen and (max-width: 480px) {
+		height: 60px;
+
 	}
-	.header_banner {
-		margin: auto 60px auto 0;
+	.header_image {
+		margin: auto 10px auto 80px;
 		img {
-			width: 55vw;
-			height: 80px;
+			width: 20vw;
+		}
+		@media screen and (max-width: 900px) and (min-width: 481px){
+			margin: auto 5px auto 45px;
 		}
 	}
+	.header_banner {
+		margin: auto 80px auto 0;
+		img {
+			width: 45vw;
+			height: 80px;
+		}
+		@media screen and (max-width: 900px) and (min-width: 481px){
+			margin: auto 40px auto 5px;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		.header_banner {
+			display: none;
+		}
+		.header_image {
+			margin-left: 26px;
+			img {
+				width: 30vw;
+			}
+		}
+	}	
 }
-
+					/* -------- NAV BAR --------*/
 nav {
 	background-color: black;
 	ul {
 		height: 40px;
-		margin: 0;
+		margin: 0 0 0 60px;
 		padding: 0 5px;
+			@media screen and (max-width: 900px) and (min-width: 481px){
+			text-align:center;
+			margin: 0 auto;
+			}
+			@media screen and (max-width: 481px) {
+			text-align: center;
+			margin: 0 auto;
+	}
 		li {
 			font-weight: bold;
 			padding: 10px 15px;
@@ -45,9 +75,8 @@ nav {
 			}
 		}
 	}
-	
 }
-
+					/* -------- CONTENT BEGINS --------*/
 #content {
 	width:90%;
 	margin: auto;
@@ -60,19 +89,47 @@ nav {
 		padding: 10px 10px;
 		font-size: 1.2em;
 	}
+	@media screen and (max-width: 480px) {
+	.date {
+	 	display: none;
+	 	}
+	}
+	a {
+		text-decoration: none;
+	}
 }
+					/* -------- CONTAINER 1 WITH PICTURES -------- */
 #container1 {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 
 	.fswd1 {
-		align-self: stretch;
 		flex: 0 12%;
 		justify-content: end;
+		display: flex;
+		img {
+			align-self: stretch;
+			flex: 0 100%;
+		}
 	}
+	@media screen and (max-width: 900px) and (min-width: 481px){
+		.fswd1 {
+			display: none;
+		}.img_div {
+			flex: 0 30%;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		.fswd1 {
+			display: none;
+		}
+	}
+
 	.together {
 		flex: 0 85%;
+								
+								/* ------- FIRST AND SECOND ROW OF PICTURES -------*/
 
 		.first_row, .second_row {
 			width: 100%;
@@ -83,6 +140,8 @@ nav {
 
 			.img1 {
 				background-image: url('./img/nasa.png');
+				@media screen and (max-width: 480px) {
+				margin-bottom: 20px;}
 			}
 			.img2 {
 				background-image: url('./img/eu.png');
@@ -92,12 +151,25 @@ nav {
 			}
 			.img4 {
 				background-image: url('./img/polar.png');
+				@media screen and (max-width: 480px) {
+				margin-bottom: 20px;}
 			}
 			.img5 {
 				background-image: url('./img/musk.jpg');
 			}
 			.img6 {
 				background-image: url('./img/snowden.jpg');
+				@media screen and (max-width: 480px) {
+				margin-bottom: 20px;}
+			}
+			.img11 { background-image: url('./img/banner2.png');
+				display: none;
+			}
+			@media screen and (min-width: 480px) {
+				#idimg11 {
+					display: none;
+
+				}
 			}
 
 			.img_div {
@@ -109,7 +181,6 @@ nav {
 				display: flex;
 				flex-direction: column;
 			
-
 				p {
 					background-color: $black;
 					color: white;
@@ -122,15 +193,34 @@ nav {
 		}
 	}
 
+						/* -------- MEDIA QUERIES FOR CONTAINER 1 ---------*/
+
+	@media screen and (max-width: 900px) and (min-width: 480px){
+		.together {
+			flex: 0 100%;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		.together {
+			flex: 0 100%;
+			.first_row, .second_row {
+				flex-wrap: wrap;
+				.img_div{
+					flex: 0 48%;
+				}
+			}
+		}
+	}
+
 		.top_news {
 			font-weight: bold;
 			background-color: lightgray;
 			padding: 10px 10px;
 			font-size: 1.2em;
 		}
-	
 }
-.how_to {
+.fswd2 {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
@@ -139,7 +229,13 @@ nav {
 		width: 100%;
 		height: 15vh;
 	}
+	@media screen and (max-width: 480px) {
+		display: none;
+	}
 }
+
+							/* ------- CONTAINER 2 WITH PICTURES ------- */
+
 #container2 {
 	display: flex;
 	justify-content: space-between;
@@ -180,6 +276,8 @@ nav {
 			
 				&.img7, .img8 {
 					margin-bottom: 45px;
+					@media screen and (max-width: 480px) {
+					margin-bottom: 20px;}
 				}
 
 				p {
@@ -189,33 +287,69 @@ nav {
 					margin-top: auto;
 					margin-bottom: 0px;
 					font-weight: bold;
-					font-size: 1.5em;
+					font-size: 1.8em;
 				}
 			}
 		}
 	}
 	.fswd1 {
-		align-self: stretch;
 		flex: 0 12%;
 		justify-content: end;
+		display: flex;
+		img {
+			align-self: stretch;
+			flex: 0 100%;
+		}
+	}
+
+					/* ----- MEDIA QUERIES FOR CONTAINER 2 ------- */
+
+	@media screen and (max-width: 900px) and (min-width: 480px){
+		.fswd1 {
+			display: none;
+		}
+		.together2 {
+			flex: 0 100%;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		.fswd1 {
+			display: none;
+		}
+		.together2 {
+			flex: 0 100%;
+			.third_row, .fourth_row {
+				flex-wrap: wrap;
+				.img_div {
+					height: 26vh;
+					p {
+						font-size: 1em;
+					}
+
+				}
+			}
+		}
 	}
 }
 
+						/* ------ FOOTER ----- */
+
 footer {
 	margin-top: 30px;
+	margin-bottom: 0;
 	background-color: black;
 	height: 200px;
 	ul {
 		height: 40px;
-		margin: 0;
+		margin: 0 50px;
 		padding: 0 5px;
-		margin-left: 40px;
-
+			@media screen and (max-width: 900px) and (min-width: 480px){
+				margin: 0 35px;
+			}
 		li {
 			font-weight: bold;
 			padding: 10px 15px;
 			display: inline-block;
-
 			&:hover {
 				background-color: red;
 				color: black;
@@ -228,18 +362,36 @@ footer {
 		}
 	}
 	.header_image {		
-		margin: 30px 20px;
+		margin: 30px 80px;
 		text-align: right;
+			@media screen and (max-width: 900px) and (min-width: 480px){
+				margin: 0 35px;
+			}
 		img {
-			width: 16vw;
-			height: auto;
+			height: 50px;
 		}
 	}
 	p {
 		color: white;
 		font-weight: bold;
 		text-align: center;
-		padding-bottom: 20px;
 		margin: 0 auto;
+	}
+
+						/* ---------- FOOTER MEDIA QUERIES ---------- */
+
+	@media screen and (max-width: 480px) {
+		height: 150px;
+		ul {
+			text-align: center;
+			padding-top: 5px;
+			li {
+				padding: 2px 4px;
+			}
+		}	
+		.header_image {
+			text-align: center;
+			margin: 10px 0;
+		}	
 	}
 }
